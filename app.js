@@ -13,10 +13,10 @@ const bodyParser = require('body-parser');
 // get username password and cluster from environment
 const username = encodeURIComponent(process.env.MONGODB_USERNAME);
 const password = encodeURIComponent(process.env.MONGODB_PASSWORD);
-const clustur = process.env.CLUSTER_URL;
+const cluster = process.env.CLUSTER_URL;
 console.log(clusture);
 mongoose.connect(
-    `mongodb+srv://${username}:${password}@${clustur}/?retryWrites=true&w=majority`,
+    `mongodb+srv://${username}:${password}@${cluster}/?retryWrites=true&w=majority`,
 {
     useNewUrlParser: true,
     useUnifiedTopology: true
